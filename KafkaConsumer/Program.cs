@@ -1,10 +1,13 @@
-﻿namespace KafkaConsumer
+﻿using KafkaProducer;
+
+namespace KafkaConsumer
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var startup = new Startup();
+            startup.StartAsync().Wait();
         }
     }
 }

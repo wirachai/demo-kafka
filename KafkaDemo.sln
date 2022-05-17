@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Consumer", "2. Consumer"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaDemo.ApplicationCore", "KafkaDemo.ApplicationCore\KafkaDemo.ApplicationCore.csproj", "{35C786E0-5CA0-4138-95D1-8D214CFDB442}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{B8E813D7-E5F1-4C27-A7B6-8B900678B808}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{BA2C6CCF-6293-4D3A-A3BD-4A3EA129AC14} = {6F95DC01-863F-47DF-809E-FBC8C44D005B}
 		{59EB0C90-1C3C-4903-A403-0023B1B7342B} = {0CE45FB8-44AF-476B-BCA3-3531FBE380E0}
+		{35C786E0-5CA0-4138-95D1-8D214CFDB442} = {B8E813D7-E5F1-4C27-A7B6-8B900678B808}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B77A81B-DE7B-4C6F-8DD2-4118D39C84A3}

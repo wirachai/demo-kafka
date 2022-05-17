@@ -107,7 +107,7 @@ namespace KafkaProducer.Tasks
             {
                 Timestamp = DateTime.Now,
                 MachineName = machineName,  // for demo purpose
-                SomeText = $"Hello {totalSent.Current + 1:#,##0}"
+                SomeText = $"Hello {DateTime.Now.Ticks}"
             };
             string message = JsonConvert.SerializeObject(data);
             await kafkaProducer.ProduceAsync(kafkaTopic, new Message<Null, string> { Value = message });
