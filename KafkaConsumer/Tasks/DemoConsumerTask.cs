@@ -3,14 +3,12 @@ using KafkaConsumer.Configurations;
 using KafkaDemo.ApplicationCore.Models;
 using KafkaDemo.ApplicationCore.Utility;
 using Newtonsoft.Json;
-using System.Collections.Concurrent;
 
 namespace KafkaConsumer.Tasks
 {
     internal class DemoConsumerTask
     {
         private readonly ConfigurationContext configuration;
-        private readonly ConcurrentQueue<DemoMessage> localQueues = new ConcurrentQueue<DemoMessage>();
         private Progress totalProcessed = new Progress();
 
         public DemoConsumerTask(ConfigurationContext configuration)
@@ -97,7 +95,9 @@ namespace KafkaConsumer.Tasks
                                 continue;
                             }
 
-                            // process message
+                            // Note: to incrase speed,
+                            //       implement ConcurrentQueue<DemoMessage> to store message from Kafka
+                            //       and do async to process the queue
                             var message = JsonConvert.DeserializeObject<DemoMessage>(consumeResult.Message.Value);
                             WriteLog($"{message.SomeText} from {message.MachineName} @partition [{consumeResult.Partition.Value}]");
 
